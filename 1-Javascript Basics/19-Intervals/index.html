@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            background-color: lightseagreen;
+            height: 98vh;
+            width: 15vh;
+            color:white;
+            text-align: center;
+            margin: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+
+        var result ;
+
+        function changeColor() {
+            var color = ["blue" , "red" , "yellow" , "green" , "brown" , "lightcoral"];
+
+            var random = Math.round(Math.random()*5);
+
+            result = color[random];
+        }
+
+
+       var set =  setInterval(function () {
+            // document.write("JavaScript.." + "<br/>") 
+            changeColor();
+            var test = document.getElementById("div");
+
+            test.innerHTML += "JavaScript..<br/>";
+
+            test.style.background = result;
+
+        },2000);
+
+        // clearInterval(set);
+
+////////////////////////////////////////////////////
+
+        // var set =  setTimeout(function () {
+        //     // document.write("JavaScript.." + "<br/>") 
+        //     changeColor();
+        //     var test = document.getElementById("div");
+
+        //     test.innerHTML += "JavaScript..<br/>";
+
+        //     test.style.background = result;
+
+        // },4000);
+
+        // 4 saniye gozduyub 1 defe isdeyecek
+////////////////////////////////////////////////////////////
+
+        // function setColor(){
+        //     changeColor();
+        //     var test = document.getElementById("div");
+
+        //     test.innerHTML += "JavaScript..<br/>";
+
+        //     test.style.background = result;
+        // }
+
+        // var set =  setTimeout(setColor , 4000);
+
+    </script>
+</body>
+</html>
