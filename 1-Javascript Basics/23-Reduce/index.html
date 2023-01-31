@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [2, 5, 8, 15];
+        let total = 0;
+
+        // 1
+        numbers.forEach(number => total = total + number);
+        document.write(total);
+
+        // 2
+        let test = numbers.reduce(function (total, number) { // 2 deyer almalidi
+            return total + number;
+        }, 5);//baslangic deyeri
+        document.write(test);
+
+        // let test = numbers.reduce((total, number) =>  total + number , 0 ); //burda totala 0 verdiyiz ucun isdeyecek
+        // document.write(test);
+
+        // 3
+
+        const basket = [
+            {
+                model: "Samsung A71",
+                price: 700
+            },
+            {
+                model: "Samsung A51",
+                price: 500
+            },
+            {
+                model: "Samsung S20",
+                price: 1000
+            }
+        ]
+
+        let sum = basket.reduce((acc, item) => acc + item.price, 0); // baslangic deyeri vermek lazimdi burada 0
+        console.log(sum);
+
+
+
+        // 4
+        // bir nameden nece eddir o tapilacaq
+        const names = ['Niyazi', 'Malik', 'Elvin', 'Kenan', 'Israfil', 'Israfil'];
+        // name burda arrayin icinde gezir ve 1 eded olanlari ifden kecirdir artiq olanlar ise if-de qalir
+        let countNames = names.reduce((allNames, name) => {
+
+            if (name in allNames) {
+                allNames[name]++;// 2 defe olan name ise if-de qalib 1 artacaq
+            }
+            else {
+                allNames[name] = 1; // nameler 1 eded olanlar tek oldugu ucun birbasa else-ye dusecek
+                // ve 1-re beraber olacaq
+            }
+            return allNames;
+        }, {});// nameler bunun icine atilacaq bos obyektin
+        console.log(countNames);
+
+
+        // 5
+        const products = [
+            {
+                model: "Samsung A71",
+                brand: "Samsung"
+            },
+            {
+                model: "Samsung A51",
+                brand: "Samsung"
+            },
+            {
+                model: "Samsung S20",
+                brand: "Samsung"
+            },
+            {
+                model: "Iphone 13",
+                brand: "Apple"
+            },
+            {
+                model: "Iphone 14",
+                brand: "Apple"
+            },
+            {
+                model: "Redmi",
+                brand: "Xiomi"
+            },
+            {
+                model: "RedmiNote",
+                brand: "Xiomi"
+            },
+        ]
+
+        const groupBy = (array, property) => {
+
+            return array.reduce((arr, product) => {
+                let key = product[property] //brandi reduce-nin propertysine beraber edirik
+                if (!arr[key]) {  // eger array-in icinde key yani hansisa brand yoxdusa yarat ve at bos arrayin icine 
+                    arr[key] = []//yani yuxardaki arrayin brandlerini yaradib yeni bir arrayin icine atacaq consolda gorsenecek
+                }
+                {
+                    arr[key].push(product) // brand varsa bu defe ise teze arrayin icine push edecek
+                    return arr
+                }
+            }, {})
+
+        }
+
+        console.log(groupBy(products , 'brand'));
+
+
+    </script>
+</body>
+
+</html>

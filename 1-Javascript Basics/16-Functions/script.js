@@ -18,9 +18,9 @@ function name(ad , soyAd){
 
 // console.log(name('Niyazi' , 'Eliyev'))
 
-var isim = name('Niyazi' , 'Eliyev')
+var ad = name('Eli' , 'Eliyev')
 
-console.log(isim)
+console.log(ad)
 
 ///////////////////////////////////////////////////////////////
 
@@ -102,13 +102,6 @@ EmekligeKacYilKaldi(1990,'Çınar');
 //     var c = a+b;
 //     return c;
 // }
-
-
-
-// function arguments(){
-//     console.log(arguments)
-// }
-// arguments(10 ,20 ,30);
 
 
 // function sumAll(){
