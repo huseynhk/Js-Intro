@@ -10,8 +10,11 @@
 
 <body style="width: 1200px;height: 1000px;">
 
+
     <!-- PART1  -->
-    <button id="btn" onclick="printWindow()" style="color: green;">Click</button>
+                          <!-- openWindow() -->
+    <button id="btn" onclick="openWindow()" style="color: green;">Click</button>
+
 
 
     <!-- PART2  -->
@@ -28,7 +31,6 @@
     <!-- PART3 Screen History  -->
 
     <button id="btn4" onclick="openWindow3()" style="color: rgb(0, 128, 128);">Click</button>
-    <button id="btn5" onclick="ireli()" style="color: rgb(128, 0, 128);">Ireli</button>
 
 
 
@@ -65,9 +67,9 @@
         function actionWindow() {
 
             newWindow.moveTo(200, 200);// moveBy yuxardan asagi olcu verir
-            // resizeTo icinde veerilen olcuye gore deyisir
+            // resizeTo icinde verilen olcuye gore deyisir
             // resizeBy icinde verilen olcu ile evvelden verilen olcuyu toplayir
-            newWindow.focus();
+            // newWindow.focus();
         }
 
 
@@ -82,19 +84,6 @@
         // document.getElementById('div').innerHTML = screen;
 
 
-
-        //   <!-- PART4  -->
-        // History
-
-        function openWindow3() {
-            window.open('main.html', '_self', 'width=300', 'height=300');
-        }
-
-
-
-        function ireli() {
-            window.history.forward();
-        }
 
 
     </script>

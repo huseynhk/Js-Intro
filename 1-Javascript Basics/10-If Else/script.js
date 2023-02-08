@@ -1,6 +1,6 @@
 // if/else statements
 
-const firstName='Sena';
+const firstName='Rasim';
 const age = 19;
 const isStudent = false;
 const school = 'university';
@@ -9,34 +9,34 @@ const school = 'university';
 
               /////////////////////////////////////////////////////////////
 
-// var x = 3;
-// var y = 5;
+var x = 3;
+var y = 5;
 
-// if(x < y) {
-//     console.log('x y-den kicikdir')
-// }
-// else{
-//     console.log('x y-den boyukdur')
+if(x < y) {
+    console.log('x y-den kicikdir')
+}
+else{
+    console.log('x y-den boyukdur')
 
-// }
+}
 
 
               /////////////////////////////////////////////////////////////
 
 
-// if(firstName === 'Sena'){
-//     console.log('Merhaba Sena');
-// }
+if(firstName === 'Rasim'){
+    console.log('salam Rasim');
+}
 
-// if (age === 19){
-//     console.log('yaşınız 19');
-// }
+if (age === 19){
+    console.log('yas 19');
+}
 
-// if (isStudent){
-//     console.log('Merhaba öğrenci');
-// }else{
-//     console.log('Merhaba işler nasıl');
-// }
+if (isStudent){
+    console.log('salam telebe');
+}else{
+    console.log('netersen');
+}
 
 
               /////////////////////////////////////////////////////////////
@@ -47,14 +47,14 @@ if (age>=18){
         // (school == 'university')
 
     if ((school == 'university') || (school == 'high school')){
-        console.log('ehliyet alabilirsiniz');
+        console.log('prava al bilmezsen');
 
     } else{
-        console.log('eğitim durumunuz yetersiz');
+        console.log('tehsil kifayetsiz');
     }
 
 }else{
-    console.log('ehliyet alamazsınız');
+    console.log('olmaz');
 }
 
 
@@ -62,13 +62,13 @@ if (age>=18){
               /////////////////////////////////////////////////////////////
 
 
-// if (age > 0  && age<12 ){
-//     console.log(`${firstName} is a child`);
-// }else if (age >=13 && age <=19){
-//     console.log(`${firstName} is a teenager`);
-// }else{
-//     console.log(`${firstName} is an adult`);
-// }
+if (age > 0  && age<12 ){
+    console.log(`${firstName} is a child`);
+}else if (age >=13 && age <=19){
+    console.log(`${firstName} is a teenager`);
+}else{
+    console.log(`${firstName} is an adult`);
+}
 
 
               /////////////////////////////////////////////////////////////
@@ -88,28 +88,29 @@ if (typeof id !== 'undefined'){
 
 
 
-// var result = prompt("who's there ? ");
+var result = prompt("who's there ? ");
 
-// if(result == 'cancel'){
-//     console.log('cancelled');
+if(result == 'cancel'){
+    console.log('cancelled');
 
-// }else if(result == 'Admin'){
 
-//     var password = prompt('Enter your password : ');
+}else if(result == 'Admin'){
 
-//     if(password =='cancel'){
-//         console.log('cancelled');
+    var password = prompt('Enter your password : ');
 
-//     }else if(password== '1234'){
-//         console.log('welcome Admin');
+    if(password =='cancel'){
+        console.log('cancelled');
 
-//     }else{
-//         console.log('wrong password');
-//     }
+    }else if(password== '1234'){
+        console.log('welcome Admin');
 
-// }else{
-//     console.log('I dont know you');
-// }
+    }else{
+        console.log('wrong password');
+    }
+
+}else{
+    console.log('I dont know you');
+}
 
 
 

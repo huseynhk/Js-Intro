@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            background-color: rgb(55, 255, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Senior.Az</h1>
+    <script>
+        // function sayHello() {
+        //     return 'Hello'
+        // }
+        // console.log(sayHello())
+
+
+        // const sayHello2 = () => 'Hello'
+        // console.log(sayHello2())
+
+
+
+
+        function sayHello(name) {
+            return `Hello ${name}`
+        }
+        console.log(sayHello('Shukur'))
+
+
+        const sayHello2 = (name) => `Hello ${name}`
+        console.log(sayHello2('Kenan'))
+
+        // const sayHello2 = (name , surName) =>  `Hello ${name}  ${surName}`
+        // console.log(sayHello2('Kenan' , 'Balayev'))
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        const products = ['Apple', 'Samsung', 'Xiomi', 'Nokia']
+
+        const list = products.map(findPr)
+        function findPr(product) {
+            return product.length
+        }
+        console.log(list)
+
+        const list2 = products.map(product => product.length)
+        console.log(list2)
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+        function sum(a, b) {
+            return a + b
+        }
+        console.log(sum(10, 20))
+
+        const sum2 = ((a, b) => a + b)
+        console.log(sum2(10, 20))
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        const phones = [
+            { model: 'Iphone10', price: 2000 },
+            { model: 'Iphone13', price: 3000 },
+            { model: 'Iphone11', price: 2400 },
+            { model: 'Iphone12', price: 2900 }
+        ]
+
+        let val = phones.map(getPhone)
+        function getPhone(phone) {
+            return phone.model
+        }
+        console.log(val)
+
+        let val2 = phones.map(phone => phone.price)
+        console.log(val2)
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+                                    // THIS
+
+
+         const goods = {
+            category : 'phone',
+            names : ['SamsungA71' , 'Iphone13' , 'Xiomi'],
+            call : function() {
+                var self = this
+                this.names.map(function(name){
+                    console.log(`${self.category} ${name}`)   //self yerine this yazsan isdemiyecey ona gore
+                                                             // selfi funciondan colde tanimliyib elave etmek lazimdi
+                })
+            }
+         }
+          goods.call();
+
+
+          const goods2 = {
+            category : 'phone',
+            names : ['SamsungA71' , 'Iphone13' , 'Xiomi'],
+            call : function() {
+                this.names.map((name) =>{
+                    console.log(`${this.category} ${name}`)  
+                })
+            }
+         }
+          goods2.call();
+
+        // this function icinde isdeyir
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        var value = document.querySelector('h1').addEventListener('click', function () {
+            this.classList.toggle('active') //this bu elementin ozun temsil edir
+        })
+
+
+        var value2 = document.querySelector('h1').addEventListener('click', () => {
+            this.classList.toggle('active')
+        })
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+    </script>
+</body>
+
+</html>
